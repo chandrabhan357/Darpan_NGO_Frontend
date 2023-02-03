@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Optional JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha38rcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <title>Darpan_ngo</title>
+    <style>
+        /* .div {
+            display: flex;
+
+        } */
+        body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    -webkit-font-smoothing: antialiased;
+    color: #333;
+}
+
+        .header-top ul {
+            text-decoration: none;
+            display: flex;
+            justify-content: end;
+            flex-direction: row;
+        }
+
+
+        .header-top ul li {
+            text-decoration: none;
+            list-style: none;
+            margin-right: 15px;
+            border-left: 2px solid black;
+            padding-left: 5px;
+
+        }
+
+
+
+
+
+
+        .navbarup {
+            background-color: blue;
+
+
+        }
+
+        .navbar-text navbar-right {
+            display: inline-block;
+        }
+
+        .navbar-text navbar-right ul {
+            display: inline-block;
+        }
+
+        .navbar-text navbar-right ul li {
+            display: inline-block;
+        }
+
+        li a{
+           text-decoration: none;
+           color:#000
+           
+        }
+
+        .maeque1 {
+            padding-left: 103px;
+            padding-right: 100px;
+            background-color: black;
+            /* text-decoration-color: #FFF; */
+            color: #FFF;
+        }
+
+        .navbara {
+            width: 1177px;
+
+            overflow: hidden;
+            padding: 20px;
+
+            height: 114px;
+            background-color: #337ab7;
+            background: url(header-banner2.jpg) no-repeat right top #0e5ba8;
+        }
+
+        a.get {
+            float: right;
+            font-size: 14px;
+            font-family: Roboto, sans-serif;
+            padding-right: 10px;
+            padding-top: 40px;
+            text-decoration: none;
+            color: #fff
+        }
+
+        a.get:hover{
+            text-decoration:underline;
+        }
+
+        a.nav-link:hover{
+            background-color: #fff;
+            color:#0e5ba8      
+        }
+        .bar {
+            background-color: black;
+            color: white;
+            display: flex;
+
+
+        }
+        a.dropdown-menu dropdown-menu-dark:hover{
+            color: #0e5ba8;
+        }
+
+        .navbar-nav {
+            display: flex;
+            flex-direction: inherit;
+            padding-left: 24px;
+            margin-bottom: 0;
+            list-style: none;
+        }
+
+        .navbar-nav .nav-link {
+            padding-right: 0;
+            padding-left: 0;
+            padding-right: 50px;
+            color: white;
+            padding: 10px;
+        }
+
+        .navbar-text {
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+            margin-right: 231px;
+        }
+
+        .boxstyle {
+            display: flex;
+            padding: -4px;
+        }
+
+        .box1 {
+            padding-right: 10px;
+            margin-right: 10px;
+            width: 33%;
+        }
+
+        .box2 {
+            padding-right: 10px;
+            margin-right: 10px;
+            width: 33%;
+        }
+
+        .box3 {
+            padding-right: 10px;
+            margin-right: 10px;
+            width: 33;
+        }
+
+        p,a{
+           text-decoration: none;
+        }
+        .dropdown-menu li  a:hover{
+            color: blue !important;
+        }
+        .hov:hover{
+            text-decoration: underline;
+        }
+        
+    </style>
+
+</head>
+
+<body>
+
+    <div class="header-top" style="margin-bottom: -32px; margin-top: -9px;">
+        <div class="navbar-text navbar-right" style="padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        margin-right: 171px;"> 
+            <ul>
+                <li><a href="https://ngodarpan.gov.in/index.php/home/screenReaderAccess">Screen Reader Access </a> </li>
+
+                <li><a href="#skip_to_main">Skip to main content</a> </li>
+
+                <li><a href="javascript:void(0);" onclick="set_font_size('increase');"
+                        class="font-size-large"><span>+A</span> </a> <a class="font-size-normal"
+                        href="javascript:void(0);" onclick="set_font_size(' ')"><span>A</span> </a> <a
+                        class="font-size-small" href="javascript:void(0);"
+                        onclick="set_font_size('decrease');"><span>-A</span> </a></li>
+                <li><a href="javascript:void(0)" onClick="chooseStyle('black', 60)" tabindex="6"
+                        class="bg-color-dark"><span class="bg-color-dark">A</span> </a> <a href="javascript:void(0)"
+                        onClick="chooseStyle('layout', 60)" checked="checked" tabindex="7" class="bg-color-light"><span
+                            class="bg-color-light">A</span> </a></li>
+                <li><a class="login btn-launch" href="javascript:;" data-toggle="modal" data-target="#loginModal"><i
+                            class="fa fa-user"></i>Login/Register</a></li>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <hr style="width: 100%;">
+    <div class="container" style="width: 1200px;margin-top: -14px;">
+        <div class="navbara">
+            <div id="container">
+                <img src="./gov.png" width="50" height="75">
+                <img src="./ngo.png" width="120" height="70">
+                <img src="./Darpan-logo.png" width="239" height="85">
+                <a href="#" class="get">NITI Aayog, Government of India</a>
+
+            </div>
+
+        </div>
+        <div class="bar">
+            <ul class="navbar-nav">
+                <li class="nav-item" >
+                    <a class="nav-link active"   aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About Us</a>
+                </li>
+                <li class="nav-item dropdown" style="background-color: black;">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        NGO Directory
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdownMenuLink" >
+                        <li><a class="dropdown-item" href="#">NGOs(State-wise)</a></li>
+                        <li><a class="dropdown-item" href="#">NGOs(State-wise)</a></li>
+                        <li><a class="dropdown-item" href="#">Scheme/ Nodal officers details</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Search NGO</a>
+                </li>
+                <li class="nav-item" >
+                    <a class="nav-link active"   aria-current="page" href="#">Circular</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Help</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Apply Grant</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Blacklisted NGO</a>
+                </li>
+                
+                <li class="nav-item" style="margin-left: 259px;" >
+                    <a class="nav-link" href="#">Login/register</a>
+                </li>
+            </ul>
+        </div>
+
+        <Div class="maeque1">
+            <marquee behavior="right-left" direction=" right">
+                <p>Please call at 14414 or 011-23042707 between 9:30 AM to 5:30 PM on working days for any assistance.
+                    Please refer to Contact Us link at the bottom of page for more options to contact Darpan Team. </p>
+            </marquee>
+        </Div>
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://ngodarpan.gov.in/assets/images/slider-2.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+
+
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://ngodarpan.gov.in/assets/images/slider-2.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+
+
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="https://ngodarpan.gov.in/assets/images/slider-3.jpg" class="d-block w-100" alt="...">
+                    <div class="carousel-caption d-none d-md-block">
+
+
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        
+        <br>
+        <Div class="maeque" >
+            <marquee>
+                <p style="font-family: 'Roboto', sans-serif;
+                font-size: 14px;
+                -webkit-font-smoothing: antialiased;
+                color: #660000;
+                color: #660000;
+    font-style: oblique;">************ Appeal: All NGOs/CSOs/VOs are requested to log-in with their credentials at
+                    NGO Darpan Portal and select "Combat COVID19" activities proposed, to extend their support in Govt
+                    Initiatives
+                    to provide food to needy, medical help, mass awareness about social distancing and other
+                    precautions, help migrant workers,
+                    elderly people and women & child in need of care and hospital, help arranging logistics for patients
+                    of critical needs like dialysis,
+                    trauma, blood donation etc. ************ Kind Attention : Please
+                </p>
+            </marquee>
+        </Div>
+        <div class="para" style="margin-bottom:40px ;">
+            <p style="font-family: 'Roboto', sans-serif;
+            font-size: 14px;
+            -webkit-font-smoothing: antialiased;
+            color: #333;">The NGO DARPAN is maintained by NITI Aayog w.e.f. 1st January, 2015. NITI Aayog invites all Voluntary
+                Organizations (VOs)/ Non-Governmental
+                Organizations (NGOs) to Sign Up on the Portal.VOs/NGOs play a major role in the development of the
+                nation by
+                supplementing the efforts of the Government.
+                This portal enables VOs/NGOs to enrol centrally and thus facilitates creation of a repository of
+                information
+                about VOs/NGOs, Sector/State wise. The Portal facilitates VOs/NGOs to obtain a system generated Unique
+                ID,
+                as and when signed. The Unique ID is mandatory to apply for grants under various schemes of
+                Ministries/Departments/Governments Bodies.</p>
+        </div>
+        <div class="boxstyle">
+            <div class="box1" style="">
+
+                <div class="statistic-box.green" style="background-color: #6fbe35;padding-bottom:15px;">
+                    <div style="text-align:right;">
+                        <img alt="" src="https://ngodarpan.gov.in/assets/images/varified-icon.png">
+                    </div>
+                    <h2 style="margin-left: 15px;">
+                        <a href="https://ngodarpan.gov.in/index.php/home/statewise"
+                            style="text-decoration:none; color:#FFF;font-size: 50px;">149095</a>
+                        <br>
+                        <br>
+                        <a href="https://ngodarpan.gov.in/index.php/home/statewise"
+                            style="text-decoration:none; color:#FFF">NGOs <br> Enrolled</a>
+                    </h2>
+                </div>
+
+            </div>
+            <div class="box2" style="">
+
+                <div class="statistic-box.green" style="background-color: orange;padding-bottom:15px;">
+                    <div style="text-align:right;">
+                        <img alt="" src="https://ngodarpan.gov.in/assets/images/varified-icon.png">
+                    </div>
+                    <h2 style="margin-left: 15px;">
+                        <a href="https://ngodarpan.gov.in/index.php/home/statewise"
+                            style="text-decoration:none; color:#FFF;font-size: 50px;">53</a>
+                        <br>
+                        <br>
+                        <a href="https://ngodarpan.gov.in/index.php/home/statewise"
+                            style="text-decoration:none; color:#FFF">Participating <br> Department</a>
+                    </h2>
+                </div>
+
+            </div>
+            <div class="box1" style="">
+
+                <div class="statistic-box.green" style="background-color:#523fc2;padding-bottom:15px;">
+                    <div style="text-align:right;">
+                        <img alt="" src="https://ngodarpan.gov.in/assets/images/varified-icon.png">
+                    </div>
+                    <h2 style="margin-left: 15px;">
+                        <a href="https://ngodarpan.gov.in/index.php/home/statewise"
+                            style="text-decoration:none; color:#FFF;font-size: 50px;">149095</a>
+                        <br>
+                        <br>
+                        <a href="https://ngodarpan.gov.in/index.php/home/statewise"
+                            style="text-decoration:none;  color:#FFF">Online<br> Departments</a>
+                    </h2>
+                </div>
+
+            </div>
+        </div>
+        <div class="heading" style="margin-bottom: 60px; margin-top: 15px;">
+            <h1 style="font-size: 32px;
+            color: #0e5ba8;font-family: 'Playfair Display', serif;">Disclaimer :</h1>
+            <br>
+            <p style="font-family: 'Roboto', sans-serif;
+            font-size: 14px;
+            -webkit-font-smoothing: antialiased;
+            color: #333;">The NGO-DARPAN lists the number of VOs/NGOs in India based on self-declared information. This
+                does not
+                imply
+                that organizations are endorsed or recommended by the NITI Aayog / MeitY-NIC or by the concerned
+                Ministries/Departments/Government Bodies.
+                NITI Aayog / MeitY-NIC, therefore, shall not be liable whatsoever for any damages incurred as a result
+                of
+                its use.
+            </p>
+
+        </div>
+
+        <div>
+        </div>
+
+
+
+    </div>
+    <!-- Footer -->
+    <footer class="text-center text-lg-start text-white" style="background-color:#002145">
+    
+       
+
+        <!-- Section: Links  -->
+        <section class="">
+            <div class="container text-center text-md-start mt-5">
+                <!-- Grid row -->
+                <div class="row mt-3">
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+
+                        <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                            style="width: 60px; background-color: #7c4dff; height: 2px" />
+                        <p class="hov">
+                            <a href="#!" class="text-white">Home</a>
+                        </p>
+                        <p class="hov">
+                            <a href="#!" class="text-white">About this site</a>
+                        </p>
+                        <p class="hov">
+                            <a href="#!" class="text-white">site map</a>
+                        </p>
+                        <p class="hov">
+                            <a href="#!" class="text-white">Privacy policy</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4" >
+                        <!-- Links -->
+
+                        <hr class="mb-4 mt-0 d-inline-block mx-auto"
+                            style="width: 60px; background-color: #7c4dff; height: 2px" />
+                        <p class="hov">
+                            <a href="#!" class="text-white">Link to us</a>
+                        </p>
+                        <p class="hov">
+                            <a href="#!" class="text-white">FAQs</a>
+                        </p>
+                        <p class="hov">
+                            <a href="#!" class="text-white">Linking Policies</a>
+                        </p>
+                        <p class="hov">
+                            <a href="#!" class="text-white">Help</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4" style="margin-top: 27px;">
+                        <!-- Links -->
+
+                    
+                        <p class="hov">
+                            <a href="#!" class="text-white">Terms of use </a>
+                        </p>
+                        <p class="hov">
+                            <a href="#!" class="text-white">help</a>
+                        </p>
+                        <p class="hov">
+                            <a href="#!" class="text-white">Contact us</a>
+                        </p>
+                        <p class="hov">
+                            <a href="#!" class="text-white">Copyright policies</a>
+                        </p>
+                    </div>
+
+                    <!-- Grid column -->
+                    <div class="col-md-2 footer-block footer-contact" style="padding: 20px;">
+                        <img alt="" src="https://ngodarpan.gov.in/assets/images/QRcode.jpg" width="80%">
+                    </div>
+                    <div class="col-md-4 footer-block" style="padding: 20px;">
+                        <div class="ft-logo"><img alt="NIC" src="https://ngodarpan.gov.in/assets/images/nic-logo.png">
+                        </div>
+                        <p style="margin-top: 17px;">This site is designed, hosted and maintained by National
+                            Informatics Centre, Ministry of Electronics &amp; Information Technology (MeitY), Government
+                            of India.</p>
+                    </div>
+                    <!-- Grid column -->
+                </div>
+                <!-- Grid row -->
+            </div>
+        </section>
+        <!-- Section: Links  -->
+
+        <!-- Copyright -->
+        <div class="smallfooter" style="background-color: rgba(0, 0, 0, 0.2)">
+            <div class="tiny-footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div style="text-align:center;">
+                                <a href="http://www.digitalindia.gov.in/" title="Digital India" target="_blank"
+                                    onclick="if (! confirm('This link will take you to an external web site')) { return false; }"><img
+                                        alt="Digital India, External link that opens in new window"
+                                        title="External link that opens in new window"
+                                        src="https://ngodarpan.gov.in/assets/images/digital-india-footer.png"></a>
+                                <a href="http://india.gov.in/" title="India Gov" target="_blank"
+                                    onclick="if (! confirm('This link will take you to an external web site')) { return false; }"><img
+                                        alt="National Portal, External link that opens in new window"
+                                        title="External link that opens in new window"
+                                        src="https://ngodarpan.gov.in/assets/images/india-gov.png"></a>
+                                <a href="http://niti.gov.in/" title="NITI Aayog" target="_blank"
+                                    onclick="if (! confirm('This link will take you to an external web site')) { return false; }">
+                                    <img alt="NITI Aayog, External link that opens in new window"
+                                        title="External link that opens in new window"
+                                        src="https://ngodarpan.gov.in/assets/images/nitiaayog_r.png"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div style="text-align:center;">
+                                <span
+                                    style="font-size: 85%; text-align: center; width: 100%; color: rgb(255, 255, 255);">[Best
+                                    view in Chrome 56.0 or higher,Firefox 52.0 or higher]</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+</body>
+
+</html>
